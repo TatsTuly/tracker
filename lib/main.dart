@@ -17,16 +17,17 @@ import 'package:flutter/material.dart';
            title: Text("The Tracker Sheet"),
            backgroundColor: const Color.fromARGB(255, 11, 157, 197),
          ),
-         body: Center(
-           child: Text(
-             "Hello World!",
-             style: TextStyle(
-               fontFamily: "Raleway",
-               fontSize: 40,
-               color: const Color.fromARGB(255, 98, 9, 67),
-             ),
-           ),
-         ),
+         body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Center(
+                child: Text("Item Number$index",selectionColor: Color.fromARGB(0, 16, 164, 36),),
+              
+              ),
+            );
+          },
+        ),
        ),
      );
    }
